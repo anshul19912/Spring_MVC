@@ -34,6 +34,7 @@ public class WebController {
     public String sayHello(@RequestParam("name") String name, Model model) {
         model.addAttribute("USER_ID", name);  // key and value
         model.addAttribute("name","JAVA");
+        model.addAttribute("branch","Information Technology");
 
         Student student=new Student("Rahul",12,"Computer science");
 
