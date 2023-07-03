@@ -17,7 +17,7 @@ public class WebController {
     }
 
     @RequestMapping("/mvcpage")
-    public String mvcpage(Model model){
+    public String mvcpage(Model model){                                       // the model stores values like hashmap in key,value pair
         model.addAttribute("lanuage","Java");
         model.addAttribute("framework","Spring and Spring Boot");
         model.addAttribute("cloud","Pivotal Cloud Foundry");
@@ -25,11 +25,14 @@ public class WebController {
         return "mvcpage";           // this returns mvcpage.jsp for view
     }
 
+
+    //1st page
     @RequestMapping("/homepage")
     public String homepage(){
         return "homepage";
     }
 
+    //2nd page
     @RequestMapping(value = "/hello",method = POST)
     public String sayHello(@RequestParam("name") String name, Model model) {
         model.addAttribute("USER_ID", name);  // key and value
